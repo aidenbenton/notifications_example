@@ -6,8 +6,6 @@
 #import "NotificationManager.h"
 #import "ReactiveCocoa.h"
 
-@import UIKit;
-
 static NSString * const kNotificationCategoryGiantHead  = @"SHOW_ME_WHAT_YOU_GOT";
 
 @implementation NotificationManager
@@ -20,6 +18,10 @@ static NSString * const kNotificationCategoryGiantHead  = @"SHOW_ME_WHAT_YOU_GOT
     localNotification.category = kNotificationCategoryGiantHead;
 
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+
+    // Shudder... So hacky. Don't ever do this in production.
+    UIApplication *app = [UIApplication sharedApplication];
+    [app performSelector:@selector(suspend)];
 }
 
 + (void)setupNotificationSettings {
