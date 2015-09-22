@@ -12,7 +12,7 @@ static NSString * const kNotificationCategoryGiantHead  = @"SHOW_ME_WHAT_YOU_GOT
 
 + (void)scheduleNotification {
     UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-    localNotification.alertAction = @"Do something";
+    localNotification.alertAction = @"save the planet";
     localNotification.alertBody = @"Show me what you got.";
     localNotification.fireDate = [[NSDate date] dateByAddingTimeInterval:5];
     localNotification.category = kNotificationCategoryGiantHead;

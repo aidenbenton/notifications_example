@@ -13,14 +13,6 @@
 #import "NSObject+MFLSelectorSubscription.h"
 #import "NotificationManager.h"
 
-@import UIKit;
-
-@interface ViewController ()
-
-@property (nonatomic, readonly) NotificationManager *notificationManager;
-
-@end
-
 @implementation ViewController
 
 - (void)viewDidLoad {
